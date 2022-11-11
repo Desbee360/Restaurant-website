@@ -1,0 +1,60 @@
+* {
+  background-image:
+    url("images/topography.svg"),
+    linear-gradient(110deg, #f93d66, #6d47d9);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  padding: 0%;
+  margin: 0%;
+}
+
+header {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  padding: 12px 10px;
+  color: black;
+  text-align: center;
+  background: #ffc600;
+  margin: 10px 30px;
+}
+
+.grid-content {
+  display: grid;
+  grid-template-rows: 50px;
+  align-items: center;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 2px;
+  margin-top: 50px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.menuicon :hover {
+  background-color: #ffc600;
+}
+
+.menuicon {
+  margin: 35px;
+}
