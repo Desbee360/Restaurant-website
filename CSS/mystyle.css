@@ -1,6 +1,7 @@
 body {
-  background-image: url("../images/topography.svg"),
-   linear-gradient(110deg, #f93d66, #6d47d9);
+  background-image:
+    url("../images/topography.svg"),
+    linear-gradient(110deg, #f93d66, #6d47d9);
   background-blend-mode: multiply;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -25,34 +26,32 @@ li a {
   color: black;
   text-align: center;
   background: #ffc600;
-  margin: 10px 30px;
 }
 
 .grid-content {
   display: grid;
-  width: 90%;
+  width: 100%;
   align-items: center;
   grid-template-columns: auto auto auto auto auto;
   grid-gap: 2px;
-  margin: 40px auto;
 }
 
 .menuicon {
   font-size: 30px;
-  margin: 50px;
+  margin: 40px;
   background: #ffc600;
   width: 4cm;
 }
 
 .menuicon :hover {
-  font-size: 40px;
+  color: blue;
 }
 
 .foodprices-holder {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-gap: 10px;
-  margin: 70px;
+  margin-top: 0.6cm;
 }
 
 .food-image {
@@ -68,7 +67,7 @@ li a {
 .b {
   background-color: #ffc600;
   width: 100%;
-  height: 5.7cm;
+  height: 6.5cm;
   margin-bottom: 10px;
   border-style: none;
   font-weight: bold;
@@ -81,7 +80,7 @@ li a {
   font-weight: bold;
   width: 4cm;
   margin-left: 20px;
-  font-size: large;
+  font-size: 20px;
   padding: 15px;
   margin-top: 5cm;
 }
@@ -89,9 +88,9 @@ li a {
 .p2 {
   background-color: #ffc600;
   font-weight: bold;
-  width: 3.5cm;
+  width: fit-content;
   margin-left: 20px;
-  margin-top: 0.7cm;
+  margin-top: 0.6cm;
 }
 
 .chooseItem {
@@ -101,7 +100,6 @@ li a {
   grid-gap: 10px;
   width: 100%;
   margin-top: 0.7cm;
-  margin-left: 65px;
 }
 
 .item {
@@ -111,18 +109,13 @@ li a {
   padding: 5px;
 }
 
-.note {
-  font-weight: bold;
-}
-
 .featured-taco {
   background-color: white;
   display: grid;
-  gap: 5px;
-  margin-top: 40px;
-  margin-left: 65px;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  margin-left: 100px;
+  grid-gap: 10px;
+  margin-top: 20px;
 }
 
 h1 {
@@ -131,34 +124,35 @@ h1 {
   font-size: 30px;
 }
 
-p {
+.note {
   padding-left: 20px;
   font-weight: bold;
   font-size: large;
 }
 
-div {
-  padding-left: 20px;
-  font-weight: bold;
-}
 .games {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   margin-top: 30px;
   width: 100%;
-  margin-left: 65px;
 }
+
 .line {
-  background: linear-gradient( to right, rgb(255, 255, 0 , 1) ,
-  rgb(255, 255, 0 , 0) );
+  background:
+    linear-gradient(
+      to right,
+      rgb(255, 255, 0, 1),
+      rgb(255, 255, 0, 0)
+    );
   height: 12px;
   width: 100%;
 }
+
 .text {
   font-weight: bold;
   font-size: 30px;
-  margin-left: 5px;
-  margin-right: 10px;
 }
+
 .sample-pictures {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, auto));
@@ -166,27 +160,53 @@ div {
   width: 100%;
   position: relative;
   grid-gap: 10px;
-  margin-left: 20px;
 }
-.sample-pictures > *{
+
+.sample-pictures > * {
   height: 5cm;
 }
+
 .sample-pictures > div > img {
   width: 100%;
   height: 100%;
 }
-.info {
-  margin-left: 10px;
-}
-h1 {
+
+.about {
   font-weight: bold;
   font-size: 30px;
-  font-family: 'Franklin Gothic Medium', 
-  'Arial Narrow', Arial, sans-serif;
+  font-family:
+    'Franklin Gothic Medium',
+    'Arial Narrow',
+    Arial,
+    sans-serif;
   color: #ffc600;
 }
+
 p {
+  font-family:
+    'Franklin Gothic Medium',
+    'Arial Narrow',
+    Arial,
+    sans-serif;
   font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 
-  'Arial Narrow', Arial, sans-serif;
+}
+
+.main-content {
+  width: 80%;
+  display: grid;
+  margin: 7%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #f93d66;
+  }
+
+  .featured-taco {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-content {
+    width: 80%;
+  }
 }
